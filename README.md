@@ -4,7 +4,7 @@
 
 Description:
 
-This is a small test automation framework with 1 test case for fetching photos
+**api-test** module is a small test automation framework with 1 test case for fetching photos
 from https://jsonplaceholder.typicode.com/ and analyzing response. Framework generates Allure report after execution
 
 ### Technologies stack:
@@ -27,7 +27,7 @@ from https://jsonplaceholder.typicode.com/ and analyzing response. Framework gen
 
 Description:
 
-This is a spring application with small UI and API to fetch and analyze prices for a given car model and release year.
+**avg-price** module is a spring application with small UI and API to fetch and analyze prices for a given car model and release year.
 As a result of it you will get list of highest, average and lowest price on the market. It can be used both as trough UI as by calling REST endpoint
 
 ### Technologies stack:
