@@ -20,7 +20,7 @@ from https://jsonplaceholder.typicode.com/ and analyzing response. Framework gen
 > - gradle clean
 >- gradle api-test:test
 >- gradle api-test:allureServe
-
+>
 > After test execution, a browser window with allure report will be opened.
 
 ### Part 2 - Application that analyzes prices on a marketplace
@@ -44,12 +44,12 @@ As a result of it you will get list of highest, average and lowest price on the 
 >- java -jar avg-price\build\libs\avg-price-1.0-SNAPSHOT.jar
 > 
 >
-> UI usage
+> **UI usage**
 >- open [localhost:8080](localhost:8080)
 >- populate form and click submit
 >- page with price suggestions will be shown
 >
-> API usage
+> **API usage**
 >- GET `http://localhost:8080/api/v1/cars?car=bmw x5&year=2016`
 
 
