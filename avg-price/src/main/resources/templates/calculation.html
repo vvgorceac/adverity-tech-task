@@ -2,13 +2,67 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Average price calculator app</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<p th:text="Hi" />
-<!--<p th:text="'Hello, ' + ${name} + '!'" />-->
-<form action="/calculate">
-</form>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Best offer:</h1>
+            <a th:href="${lowestPriceAdvert.url}">
+                <img th:src="${lowestPriceAdvert.imgSrc}"/>
+                <p th:text="${lowestPriceAdvert.name}"/>
+                <p th:text="${lowestPriceAdvert.price} + '€'"/>
+            </a>
+        </div>
+        <div class="col">
+            <h1>Average offer:</h1>
+            <a th:href="${avgPriceAdvert.url}">
+                <img th:src="${avgPriceAdvert.imgSrc}"/>
+                <p th:text="${avgPriceAdvert.name}"/>
+                <p th:text="${avgPriceAdvert.price} + '€'"/>
+            </a>
+        </div>
+        <div class="col">
+            <h1>Highest offer:</h1>
+            <a th:href="${maxPriceAdvert.url}">
+                <img th:src="${maxPriceAdvert.imgSrc}"/>
+                <p th:text="${maxPriceAdvert.name}"/>
+                <p th:text="${maxPriceAdvert.price} + '€'"/>
+            </a>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1>Avg Price: <p th:text="${avgPrice} + '€'">/></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="/">
+                <button type="button" class="btn btn-primary"> Home</button>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.1/cjs/popper.min.js"
+        integrity="sha256-T3bYsIPyOLpEfeZOX4M7J59ZoDMzuYFUsPiSN3Xcc2M=" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -2,7 +2,7 @@ package com.adverity.avg_price.controller;
 
 import com.adverity.avg_price.exception.InvalidInputException;
 import com.adverity.avg_price.model.AvgPriceDto;
-import com.adverity.avg_price.model.entity.enums.Categories;
+import com.adverity.avg_price.model.enums.Categories;
 import com.adverity.avg_price.service.AvgPriceService;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @AllArgsConstructor
-public class ViewController {
+public class CarsViewController {
     private final AvgPriceService avgPriceService;
 
 
@@ -30,9 +30,10 @@ public class ViewController {
 
         AvgPriceDto avgPriceDto = avgPriceService.calculateAvgPrice(Categories.CARS, carName, year);
 
-        model.addAttribute("lowestPrice", avgPriceDto.getMin());
-        model.addAttribute("avgPrice", avgPriceDto.getAvg());
-        model.addAttribute("maxPrice", avgPriceDto.getMax());
+        model.addAttribute("lowestPriceAdvert", avgPriceDto.getMin());
+        model.addAttribute("avgPriceAdvert", avgPriceDto.getAvg());
+        model.addAttribute("maxPriceAdvert", avgPriceDto.getMax());
+        model.addAttribute("avgPrice", avgPriceDto.getAvgPrice());
 
         return "calculation";
     }

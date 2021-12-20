@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+---
+marketplace:
+  url: https://999.md
+  categoryPaths:
+    cars: /ru/list/transport/cars
+  searchParamName: query

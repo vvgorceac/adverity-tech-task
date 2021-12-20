@@ -1,0 +1,4 @@
+rootProject.name = 'adverity-tech-task'
+include 'avg-price'
+include 'api-test'
+

@@ -1,0 +1,37 @@
+package com.adverity.step_definition.api;
+
+import com.adverity.dto.Photo;
+import com.adverity.step_actions.api.PhotoActionSteps;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import lombok.AllArgsConstructor;
+
+import java.util.function.Predicate;
+
+@AllArgsConstructor
+public class PhotoStepDefinition {
+    private final PhotoActionSteps photoActionSteps;
+
+
+    @When("user sends a requests for list of photos")
+    public void userSendsARequestForListOfPhotos() {
+        photoActionSteps.getPhotos();
+    }
+
+    @Then("user receives a valid response")
+    public void userReceivesAValidResponse() {
+        photoActionSteps.photoResponseShouldBeOk();
+    }
+
+    @Then("user removes all photos that have 'albumId' different than {int}")
+    public void userRemovesPhotoWithDifferentAlbumId(int albumId) {
+        Predicate<Photo> predicate = (photo) -> photo.getAlbumId().equals(albumId);
+        photoActionSteps.filterPhotosByPredicate(predicate);
+    }
+
+    @Then("user removes all photos that do not contain word {string} in the title")
+    public void userRemovesPhotoWithKeywordInTitle(String keyWord) {
+        Predicate<Photo> predicate = (photo) -> photo.getTitle().contains(keyWord);
+        photoActionSteps.filterPhotosByPredicate(predicate);
+    }
+}

@@ -1,1 +1,6 @@
 /.allure/
+/.idea/
+/api-test/target/
+/avg-price/build/
+/api-test/build/
+/.gradle/
