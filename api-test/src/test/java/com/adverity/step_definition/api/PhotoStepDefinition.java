@@ -2,8 +2,8 @@ package com.adverity.step_definition.api;
 
 import com.adverity.dto.Photo;
 import com.adverity.step_actions.api.PhotoActionSteps;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import lombok.AllArgsConstructor;
 
 import java.util.function.Predicate;
@@ -13,7 +13,7 @@ public class PhotoStepDefinition {
     private final PhotoActionSteps photoActionSteps;
 
 
-    @When("user sends a requests for list of photos")
+    @Given("user sends a requests for list of photos")
     public void userSendsARequestForListOfPhotos() {
         photoActionSteps.getPhotos();
     }

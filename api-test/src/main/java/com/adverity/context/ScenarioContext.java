@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+
+/**
+ * Holds information used during test execution
+ */
 @ScenarioScope
 @Service
 @Log4j2
